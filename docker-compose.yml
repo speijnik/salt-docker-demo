@@ -23,7 +23,7 @@ services:
       - SYS_ADMIN
     environment:
       container: docker
-    command: /usr/sbin/init
+    command: /usr/bin/salt-minion
     build:
       context: saltstack/minion1/
     volumes:
@@ -37,7 +37,7 @@ services:
       - SYS_ADMIN
     environment:
       container: docker
-    command: /usr/sbin/init
+    command: /usr/bin/salt-minion
     build:
       context: saltstack/minion2/
     volumes:
